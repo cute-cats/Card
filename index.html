@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html >
+<head lang="en">
+ <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+ 
+    <title>Final_homework_CV</title>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+ 
+</head>
+
+<body onkeydown="move(event)">
+<!--onmousewheel="return false;"-->
+<!--简历主要内容-->
+<div id="content"> 
+    <div class="BG">
+        <canvas id="bg_img_canvas"> </canvas>
+    </div>
+    <div class="sun">
+        <span style="--i:1"></span>
+        <span style="--i:2"></span>
+        <span style="--i:3"></span>
+        <span style="--i:4"></span>
+        <span style="--i:5"></span>
+        <span style="--i:6"></span>
+        <span style="--i:7"></span>
+        <span style="--i:8"></span>
+    </div >
+    <div class="could_wind" style="--ii:1">
+<!--云-->
+        <div class="cloud a">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+        <div class="cloud b">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="cloud c">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="cloud d">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+<!--风-->
+        <div class="wind a">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="wind b">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="wind c">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="wind d">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="wind e">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="wind_mini">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="could_wind" style="--ii:2">
+        <!--云-->
+        <div class="cloud a">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+        <div class="cloud b">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="cloud c">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="cloud d">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="cloud_marx ">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!--风-->
+        <div class="wind a">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="wind b">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="wind c">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="wind d">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="wind e">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="wind_mini">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!--  /*创建主角*/-->
+    <canvas id="myCanvas"  style="position:absolute;">检查浏览器的版本，它需要能够支持canvas功能</canvas>
+    <div id="pandasaying"><p>键盘按钮A/a D/d W/w S/s 分别控制左右上下方向</p></div>
+
+</div>
+
+<!--创建按钮和翻转的卡片-->
+<div id="card">
+    <!-- 旋转开关 -->
+    <input type="checkbox" style="display: none;" id="change">
+    <label for="change">~aha click me~</label>
+
+<!--两张卡片-->
+    <div class="page2">
+        <div class="page1">
+            <div  class="contact">
+                <h1 id="cv2">contact me</h1>
+                <div class="contact_herfs">
+                    <a href="mailto:test@gmail.com?subject=请输入标题&body=请输入内容">
+                        <img class="mailimg" src="./img/thanks.gif">
+                    </a>
+                    <a  href="https://mail.163.com/">
+                        <img class="mailimg" src="img/wangyi2.png">
+                    </a>
+                    <a href="mailto:test@gmail.com?subject=请输入标题&body=请输入内容">
+                        <img class="mailimg" src="img/twitter2.png">
+                    </a>
+                </div>
+            </div>
+            <div  class="cv">
+                <h1 id="cv1">welcome to my cv</h1>
+                <div id="cv_content">
+                    <img id="cv_img" src="img/cv.png" >
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--背景音乐-->
+<audio src="./BGM/nohidea.%20-%20butterflies.mp3" id="BGM" controls="true" autoplay="true" loop="loop">
+</audio>
+</body>
+</html>
